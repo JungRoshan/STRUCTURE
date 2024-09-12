@@ -1,0 +1,87 @@
+//simple code for structure//
+#include <iostream>
+using namespace std;
+
+struct Rectangle
+{
+    int length;
+    int breadth;
+};//DEFINATION OF STRUCTURE//(also defination+declaration can be done here as r={10,5}//
+
+int main()
+{
+   struct Rectangle r={10,5};//we can write this outside main making global variable//
+   printf("area is %d\n",r.length*r.breadth);
+   r.length=45;
+   r.breadth=30;
+   printf("area is %d\n",r.length*r.breadth);
+
+}//DECLARATION OF STRUCTURE variable
+
+
+
+
+//two variables in main function //
+#include <iostream>
+using namespace std;
+struct Rectangle
+{
+    int length;
+    int breadth;
+}r={10,5},r1={8,7};
+int main()
+{
+   printf("area is %d\n",r.length*r.breadth);
+   printf("area is %d\n",r1.length*r1.breadth);
+
+}
+
+
+
+//for creating  array of structure//
+#include <iostream>
+using namespace std;
+
+struct card
+{
+    int face;
+    int shape;
+    int color;
+};
+int main()
+{
+   struct card deck[52]={{1,0,0},{2,0,0}};
+   printf(" %d\n",deck[0].face);
+    printf(" %d\n",deck[0].shape);
+
+    printf(" %d\n",deck[1].face);
+    printf(" %d\n",deck[1].shape);
+    
+    printf(" %d\n",deck[2].face);
+    printf(" %d\n",deck[2].shape);
+}
+
+
+
+
+//ARRAY OF STRUCTUREFOR LOOP//
+#include <iostream>
+using namespace std;
+
+struct card
+{
+    int face;
+    int shape;
+    int color;
+};
+int main()
+{
+   struct card deck[52]={{1,0,0},{2,0,0}};
+   for(int i=0;i<53;i++)
+   {
+    
+       printf("%d\n",deck[i].face);
+   }
+
+
+}
